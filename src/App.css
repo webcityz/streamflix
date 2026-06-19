@@ -19,3 +19,87 @@ body {
 }
 
 button, input { font: inherit; }
+
+/* Media grid: show 4 cards per row on desktop, responsive downwards */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.media-card {
+  background: rgba(255,255,255,0.03);
+  padding: 0.25rem; /* restored padding */
+  border-radius: 8px;
+  overflow: hidden;
+  color: inherit;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  will-change: transform;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-card img {
+  width: 100%;
+  height: 162px; /* +15% from 140px */
+  object-fit: contain; /* show the entire image without cropping */
+  background: rgba(0,0,0,0.02);
+  display: block;
+  border-radius: 6px;
+}
+
+@media (max-width: 1024px) {
+  .media-card img { height: 138px; } /* +15% from 120px */
+}
+
+@media (max-width: 768px) {
+  .media-card img { height: 115px; } /* +15% from 100px */
+}
+
+@media (max-width: 480px) {
+  .media-card img { height: 104px; } /* +15% from 90px */
+}
+
+.media-card h2 {
+  color: #d4af37; /* gold */
+  font-size: 0.55rem; /* increased by ~40% from 0.25rem */
+  margin: 0.125rem 0 0.0625rem; /* spacing unchanged */
+  font-weight: 600;
+  text-align: center !important;
+}
+
+.media-card p {
+  font-size: 0.40rem; /* increased by ~40% from 0.21875rem */
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Hover / focus interaction */
+.media-card:hover,
+.media-card:focus-within {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .media-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 768px) {
+  .media-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 480px) {
+  .media-grid { grid-template-columns: 1fr; }
+}
+
+/* Row title styling: match site title color and align left */
+.media-row h2 {
+  color: #d4af37; /* gold */
+  text-align: left;
+  margin: 0.5rem 0 0.5rem;
+}
