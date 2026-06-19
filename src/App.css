@@ -24,13 +24,13 @@ button, input { font: inherit; }
 .media-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
-  padding: 1rem 0;
+  gap: 0.5rem; /* tighter gap */
+  padding: 0.5rem 0; /* less vertical padding */
 }
 
 .media-card {
-  background: rgba(255,255,255,0.03);
-  padding: 0.25rem; /* restored padding */
+  background: rgba(255,255,255,0.02);
+  padding: 0.12rem; /* reduce padding to free more space for image */
   border-radius: 8px;
   overflow: hidden;
   color: inherit;
@@ -43,23 +43,23 @@ button, input { font: inherit; }
 
 .media-card img {
   width: 100%;
-  height: 162px; /* +15% from 140px */
-  object-fit: contain; /* show the entire image without cropping */
-  background: rgba(0,0,0,0.02);
+  height: 180px; /* make image larger so it fills card more */
+  object-fit: contain; /* show whole image without cropping */
+  object-position: center;
   display: block;
   border-radius: 6px;
 }
 
 @media (max-width: 1024px) {
-  .media-card img { height: 138px; } /* +15% from 120px */
+  .media-card img { height: 155px; }
 }
 
 @media (max-width: 768px) {
-  .media-card img { height: 115px; } /* +15% from 100px */
+  .media-card img { height: 130px; }
 }
 
 @media (max-width: 480px) {
-  .media-card img { height: 104px; } /* +15% from 90px */
+  .media-card img { height: 110px; }
 }
 
 .media-card h2 {
