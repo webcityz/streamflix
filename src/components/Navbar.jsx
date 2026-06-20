@@ -5,7 +5,7 @@ export default function Navbar() {
     <header className="navbar">
       <a className="brand" href="/" aria-label="StreamFlix home">
         <img
-          src="../../public/images/logo-on-dark_v2.png"
+          src={`${import.meta.env.BASE_URL}images/logo-on-dark_v2.png`}
           alt="StreamFlix"
           className="brand-logo"
         />
