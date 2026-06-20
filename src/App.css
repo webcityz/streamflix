@@ -20,6 +20,10 @@ body {
 
 button, input { font: inherit; }
 
+main { overflow-x: hidden; }
+
+.media-row { padding: 1rem 4%; }
+
 /* Media grid: show 4 cards per row on desktop, responsive downwards */
 .media-grid {
   display: grid;
