@@ -1,10 +1,20 @@
 
-export default function MediaCard({ item}) {
+import { useState } from "react";
+
+export default function MediaCard({ item }) {
+  const [saved, setSaved] = useState(false);
+
   return (
-    <div className="media-card">
+    <article className="media-card">
       <img src={item.image} alt={`${item.title} poster`} />
-      <h2>{item.title}</h2>
-      <p>{item.description}</p>
-    </div>
+      <h3>{item.title}</h3>
+      <button
+        type="button"
+        aria-pressed={saved}
+        onClick={() => setSaved((current) => !current)}
+      >
+        {saved ? "✓ In My List" : "+ My List"}
+      </button>
+    </article>
   );
 }
