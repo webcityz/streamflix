@@ -80,20 +80,20 @@ main { overflow-x: hidden; }
 @media (max-width: 1024px) {
   .media-card img { height: 155px; 
   object-fit: contain; /* show whole image without cropping */
-  object-position: center;
+  object-position: center !important;
   }
 }
 
 @media (max-width: 768px) {
   .media-card img { height: 130px; 
   object-fit: contain; /* show whole image without cropping */
-  object-position: center;}
+  object-position: center !important;}
 }
 
 @media (max-width: 480px) {
   .media-card img { height: 110px; 
   object-fit: contain; /* show whole image without cropping */
-  object-position: center;}
+  object-position: center !important;}
 }
 
 
