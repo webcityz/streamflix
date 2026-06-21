@@ -76,7 +76,7 @@ main { overflow-x: hidden; }
   transform: translateY(-6px) scale(1.03);
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
 }
-
+/*
 @media (max-width: 1024px) {
   .media-card img { height: 155px; }
 }
@@ -90,7 +90,7 @@ main { overflow-x: hidden; }
 }
 
 
-/* Responsive breakpoints */
+/* Responsive breakpoints *//*
 @media (max-width: 1024px) {
   .media-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
@@ -103,9 +103,20 @@ main { overflow-x: hidden; }
   .media-grid { grid-template-columns: 1fr; }
 }
 
+*/
+
 /* Row title styling: match site title color and align left */
 .media-row h2 {
   color: #d4af37; /* gold */
   text-align: left;
   margin: 0.5rem 0 0.5rem;
 }
+
+/* ========================================================= 320PX — SMALL MOBILE Applies from 320px to 767px ========================================================= */ 
+@media screen and (min-width: 320px) { /* Navbar */ .navbar { position: relative; z-index: 1000; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; min-height: 64px; padding: 0.75rem 1rem; background: rgba(0, 0, 0, 0.92); } .brand { display: inline-flex; align-items: center; max-width: 120px; } .brand img { width: 100%; height: auto; object-fit: contain; } .navbar nav { display: flex; flex-basis: 100%; gap: 1rem; overflow-x: auto; padding-bottom: 0.25rem; scrollbar-width: none; } .navbar nav::-webkit-scrollbar { display: none; } .navbar nav a { flex-shrink: 0; color: #ffffff; font-size: 0.875rem; text-decoration: none; } /* Hero */ .hero { position: relative; display: flex; align-items: flex-end; min-height: 68vh; padding: 5rem 1rem 2rem; background-position: center; background-repeat: no-repeat; background-size: cover; } .hero::before { position: absolute; inset: 0; content: ""; background: linear-gradient( to top, #0b0b0b 4%, rgba(11, 11, 11, 0.82) 35%, rgba(11, 11, 11, 0.2) 70% ); } .hero-content { position: relative; z-index: 1; width: 100%; max-width: 540px; } .hero-title { margin: 0 0 0.75rem; font-size: clamp(2rem, 11vw, 3rem); line-height: 1; } .hero-description { display: -webkit-box; margin: 0 0 1rem; overflow: hidden; color: #e0e0e0; font-size: 0.9rem; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 3; } .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; } .hero-actions button, .hero-actions a { min-height: 42px; padding: 0.7rem 1rem; border: 0; border-radius: 0.3rem; font-size: 0.875rem; font-weight: 700; cursor: pointer; } /* Content sections */ .content-section { padding-block: 1.5rem; } .section-title { margin: 0 0 1rem; font-size: 1.25rem; } .media-row { display: grid; grid-auto-columns: minmax(145px, 45vw); grid-auto-flow: column; gap: 0.75rem; overflow-x: auto; padding: 0 1rem 1rem; scroll-snap-type: x mandatory; scrollbar-width: none; } .media-row::-webkit-scrollbar { display: none; } .media-card { min-width: 0; overflow: hidden; border-radius: 0.4rem; background: #181818; scroll-snap-align: start; } .media-card img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; } .media-card-content { padding: 0.75rem; } .media-card-title { margin: 0; overflow: hidden; font-size: 0.9rem; text-overflow: ellipsis; white-space: nowrap; } /* Footer */ .footer { padding: 2rem 1rem; text-align: center; } .footer-links { display: flex; flex-direction: column; gap: 0.75rem; } } 
+/* ========================================================= 768PX — TABLET Applies from 768px to 1439px ========================================================= */ 
+@media screen and (min-width: 768px) { .page-container { padding-inline: 2rem; } /* Navbar */ .navbar { flex-wrap: nowrap; min-height: 72px; padding: 0.9rem 2rem; } .brand { max-width: 150px; } .navbar nav { flex-basis: auto; margin-left: auto; overflow: visible; padding-bottom: 0; } .navbar nav a { font-size: 0.95rem; } /* Hero */ .hero { align-items: center; min-height: 72vh; padding: 6rem 2rem 3rem; background-position: center top; } .hero::before { background: linear-gradient( 90deg, rgba(11, 11, 11, 0.95) 0%, rgba(11, 11, 11, 0.7) 42%, rgba(11, 11, 11, 0.1) 75% ), linear-gradient( to top, #0b0b0b 0%, transparent 35% ); } .hero-content { width: 60%; max-width: 620px; } .hero-title { font-size: clamp(3rem, 7vw, 4.5rem); } .hero-description { font-size: 1rem; -webkit-line-clamp: 4; } .hero-actions button, .hero-actions a { min-height: 46px; padding: 0.8rem 1.4rem; font-size: 0.95rem; } /* Content */ .content-section { padding-block: 2rem; } .section-title { font-size: 1.5rem; } .media-row { grid-auto-columns: minmax(180px, 24vw); gap: 1rem; padding-inline: 2rem; } .media-card-title { font-size: 1rem; } /* Optional grid pages */ .media-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; } /* Footer */ .footer-links { flex-direction: row; flex-wrap: wrap; justify-content: center; } } 
+/* ========================================================= 1440PX — LARGE DESKTOP Applies from 1440px upwards ========================================================= */ 
+@media screen and (min-width: 1440px) { .page-container { max-width: 1600px; padding-inline: 4rem; } /* Navbar */ .navbar { min-height: 80px; padding: 1rem 4rem; } .brand { max-width: 180px; } .navbar nav { gap: 1.75rem; } .navbar nav a { font-size: 1rem; } /* Hero */ .hero { min-height: 82vh; padding: 8rem 4rem 4rem; } .hero-content { width: 46%; max-width: 700px; } .hero-title { font-size: clamp(4rem, 5vw, 6rem); } .hero-description { max-width: 650px; font-size: 1.1rem; line-height: 1.7; } .hero-actions { gap: 1rem; } .hero-actions button, .hero-actions a { min-height: 50px; padding: 0.9rem 1.75rem; font-size: 1rem; } /* Content */ .content-section { padding-block: 2.5rem; } .section-title { font-size: 1.75rem; } .media-row { grid-auto-columns: minmax(200px, 15vw); gap: 1.25rem; padding-inline: 4rem; } .media-card { transition: transform 180ms ease, box-shadow 180ms ease; } .media-card:hover { z-index: 2; transform: translateY(-6px) scale(1.03); box-shadow: 0 14px 35px rgba(0, 0, 0, 0.55); } /* Optional grid pages */ .media-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.25rem; } /* Footer */ .footer { padding: 3rem 4rem; } } 
+/* ========================================================= ACCESSIBILITY AND MOTION ========================================================= */ 
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; } }
