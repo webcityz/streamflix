@@ -99,7 +99,7 @@ main { overflow-x: hidden; }
 
 /* Responsive breakpoints */
 @media (max-width: 1024px) {
-  .media-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .media-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
@@ -107,7 +107,7 @@ main { overflow-x: hidden; }
 }
 
 @media (max-width: 480px) {
-  .media-grid { grid-template-columns: 1fr; }
+  .media-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 /* Row title styling: match site title color and align left */
