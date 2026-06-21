@@ -77,6 +77,34 @@ main { overflow-x: hidden; }
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
 }
 
+.my-list-button {
+  border: none;
+  border-radius: 4px;
+  padding: 0.65rem 1rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #111;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    transform 150ms ease;
+}
+
+.my-list-button:hover {
+  background-color: #ffffff;
+  transform: scale(1.03);
+}
+
+.my-list-button[aria-pressed="true"] {
+  background-color: #e50914;
+  color: #ffffff;
+}
+
+.my-list-button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
 @media (max-width: 1024px) {
   .media-card img { height: 155px; 
   object-fit: contain; /* show whole image without cropping */
